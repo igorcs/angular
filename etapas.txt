@@ -61,4 +61,66 @@ Agora, vamos para o Frontend:
 12) Crie o arquivo proxy.conf.json na pasta src como está em arquivos_para_copiar
 13) Altere o arquivo angular.json, que está na raiz do frontend, para adicionar a seção "options" ao atributo "serve", como está na pasta "arquivos_para_copiar".
 14) Teste a aplicação com: ng serve --open
+-- extras
+sudo docker stop bensvet-2-docker_web_1 api-bensvet-2-docker_web_1
+cd /var/www/html/tutorial_frontend_backend
+/home/igor/Área\ de\ Trabalho/nexus/idea-IU-262.8665.337/bin/idea.sh .
+https://www.youtube.com/watch?v=fLJoIfxjsuA
+nvm use 22.13.1
+curso angular iniciante; https://www.youtube.com/watch?v=oUmVFHlwZsI
+https://ralflima.com/treinamentos/spring_angular_2026/01introducao.php
+Curso Angular básico;https://www.youtube.com/playlist?list=PLnDvRpP8Bnex2GQEN0768_AxZg_RaIGmw
+criar novos componentes; npx -p @angular/cli ng generate component components/parent-data
+
+criar nova rota de inserir notícia
+
+--------------------------------------
+Claro! Aqui está um texto pronto para você copiar e salvar como .txt:
+
+Criação de uma rota nova para cadastrar notícia
+
+Abra o arquivo:
+src/app/app-routing.module.ts
+
+Adicione o import do novo componente:
+import { NovaNoticiaComponent } from './nova-noticia/nova-noticia.component';
+
+Inclua a nova rota:
+const routes: Routes = [
+{ path: '', component: ListaNoticiasComponent },
+{ path: 'detalhes', component: DetalheNoticiaComponent },
+{ path: 'nova-noticia', component: NovaNoticiaComponent }
+];
+
+Crie o componente:
+src/app/nova-noticia/nova-noticia.component.ts
+
+Crie também os arquivos:
+src/app/nova-noticia/nova-noticia.component.html
+src/app/nova-noticia/nova-noticia.component.css
+
+Para abrir a tela:
+<a routerLink="/nova-noticia">Nova notícia</a>
+
+ou no TypeScript:
+this.router.navigate(['/nova-noticia']);
+
+Dentro do novo componente, crie um formulário com campos como:
+
+titulo
+texto
+imagem
+data
+Ao enviar o form, faça o POST para o backend:
+this.http.post('/api/', noticia)
+
+Resumo:
+
+adicionar a rota
+criar o componente
+criar link para navegar
+montar o formulário
+enviar os dados para a API
+
+--------------------------------------
 

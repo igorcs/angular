@@ -1,0 +1,21 @@
+<form (ngSubmit)="salvarNoticia()">
+  <label>Título</label>
+  <input type="text" [(ngModel)]="noticia.titulo" name="titulo">
+
+  <label>Resumo</label>
+  <input type="text" [(ngModel)]="noticia.resumo" name="resumo">
+
+  <label>Thumb</label>
+  <input type="text" [(ngModel)]="noticia.thumb" name="thumb">
+
+  <label>Imagem</label>
+  <input type="text" [(ngModel)]="noticia.imagem" name="imagem">
+
+  <label>Texto</label>
+  <textarea [(ngModel)]="noticia.texto" name="texto"></textarea>
+
+  <label>Data</label>
+  <input type="datetime-local" [(ngModel)]="noticia.data" name="data">  
+
+  <button type="submit">Salvar</button>
+</form>
